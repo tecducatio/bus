@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva de Asientos</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reserva de Autobuses Madrid-Ponferrada</h1>
+            <div class="controls">
+                <select id="routeSelect">
+                    <option value="Madrid-Ponferrada">Madrid → Ponferrada</option>
+                    <option value="Ponferrada-Madrid">Ponferrada → Madrid</option>
+                </select>
+                <input type="date" id="dateInput">
+                <select id="timeSelect">
+                    <option value="08:00">8:00 AM</option>
+                    <option value="22:00">10:00 PM</option>
+                </select>
+                <button onclick="loadSeats()">Buscar</button>
+            </div>
+        </header>
+        
+        <div class="seat-map">
+            <div class="bus-layout" id="seatContainer"></div>
+            <button onclick="reserveSeat()" class="reserve-btn">Reservar Asiento</button>
+        </div>
+    </div>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
