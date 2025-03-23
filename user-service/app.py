@@ -7,7 +7,7 @@ from functools import wraps
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key-here'
-
+#comentado
 def get_db():
     conn = sqlite3.connect('users.db')
     return conn
